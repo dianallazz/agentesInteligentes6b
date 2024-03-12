@@ -79,6 +79,11 @@ def ruta_nueva():
     estado_intermedio = st.text_input("Ingrese el estado intermedio: ")
     estado_final = st.text_input("Ingrese el estado final: ")
 
+    # Verifica si los estados ingresados por el usuario existen en el diccionario estados
+    if estado_inicial not in estados or estado_intermedio not in estados or estado_final not in estados:
+        st.error("Ingrese estados válidos.")
+        return
+
     Q = Q_learning()
 
     # Inicialización de la ruta
