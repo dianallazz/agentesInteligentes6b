@@ -74,7 +74,7 @@ def Q_learning(epochs=10000, gamma=0.75, alpha=0.9):
     return Q.astype(int)
 
 def ruta_nueva():
-    st.image("rutas2.jpg", caption="Descripción de la imagen", use_column_width=True)
+    st.image("rutas2.jpg", caption="Rutas", use_column_width=True)
     estado_inicial = st.text_input("Ingrese el estado inicial: ")
     estado_intermedio = st.text_input("Ingrese el estado intermedio: ")
     estado_final = st.text_input("Ingrese el estado final: ")
